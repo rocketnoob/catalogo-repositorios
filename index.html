@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Repositórios - GitHub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🚀 Catálogo de Repositórios</h1>
+            <p>Explore projetos incríveis do GitHub filtrados por linguagem</p>
+        </div>
+
+        <div class="search-container">
+            <form class="search-form" id="searchForm">
+                <div class="form-group">
+                    <label for="username">Usuário do GitHub:</label>
+                    <input type="text" id="username" placeholder="ex: facebook, vercel, rails" value="facebook">
+                </div>
+                <div class="form-group">
+                    <label for="language">Linguagem:</label>
+                    <select id="language">
+                        <option value="">Todas as linguagens</option>
+                        <option value="JavaScript">JavaScript</option>
+                        <option value="TypeScript">TypeScript</option>
+                        <option value="Python">Python</option>
+                        <option value="Java">Java</option>
+                        <option value="HTML">HTML</option>
+                        <option value="CSS">CSS</option>
+                        <option value="PHP">PHP</option>
+                        <option value="Ruby">Ruby</option>
+                        <option value="Go">Go</option>
+                        <option value="Rust">Rust</option>
+                        <option value="C#">C#</option>
+                        <option value="C++">C++</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>&nbsp;</label>
+                    <button type="submit">🔍 Buscar Repositórios</button>
+                </div>
+            </form>
+        </div>
+
+        <div id="loading" class="loading" style="display: none;">
+            <div class="spinner"></div>
+            Buscando repositórios...
+        </div>
+
+        <div id="results" style="display: none;"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
